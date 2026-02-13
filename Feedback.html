@@ -1,0 +1,52 @@
+<!-- Customer Feedback Section -->
+<section id="feedback" class="feedback">
+    <h2 class="section-title">Customer Feedback</h2>
+
+    <!-- Existing Reviews -->
+    <div class="feedback-container">
+        <div class="review-card">
+            <p>"Great quality products and fast delivery!"</p>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <h4>- Rahul Sharma</h4>
+        </div>
+
+        <div class="review-card">
+            <p>"Affordable prices and excellent service."</p>
+            <div class="stars">⭐⭐⭐⭐</div>
+            <h4>- Neha Gupta</h4>
+        </div>
+
+        <div class="review-card">
+            <p>"Very smooth shopping experience."</p>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <h4>- Aman Verma</h4>
+        </div>
+    </div>
+
+    <!-- Interactive Feedback Form -->
+    <h3>Share Your Experience</h3>
+    <form class="feedback-form" onsubmit="submitFeedback(event)">
+        
+        <input type="text" id="name" placeholder="Your Name" required>
+
+        <!-- Star Rating -->
+        <div class="rating">
+            <span onclick="setRating(1)">★</span>
+            <span onclick="setRating(2)">★</span>
+            <span onclick="setRating(3)">★</span>
+            <span onclick="setRating(4)">★</span>
+            <span onclick="setRating(5)">★</span>
+        </div>
+        <p id="rating-text">Rating: 0</p>
+
+        <!-- Feedback Text -->
+        <textarea id="message" placeholder="Write your feedback..." maxlength="150" oninput="countChars()" required></textarea>
+        <small id="char-count">0 / 150 characters</small>
+
+        <button type="submit">Submit Feedback</button>
+    </form>
+
+    <!-- Thank You Message -->
+    <p id="thank-you" class="thank-you"></p>
+</section>
+
